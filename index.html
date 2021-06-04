@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Heatmap</title>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+        <link rel="stylesheet" type="text/css" href="./style.css" />
+        <script src="./index.js"></script>
+    </head>
+    <body>
+        <!-- Search bar -->
+
+        <div id="floating-panel">
+            <button onclick="toggleHeatmap()">Toggle Heatmap</button>
+            <!-- <button onclick="changeGradient()">Change gradient</button> -->
+            <button onclick="changeRadius()">Change radius</button>
+            <!-- <button onclick="changeOpacity()">Change opacity</button> -->
+            <input
+                id="pac-input"
+                class="controls"
+                type="text"
+                placeholder="Search Box"
+            />
+        </div>
+
+        <div id="map"></div>
+
+        <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+
+        <!-- api key = AIzaSyBIALYwKitL-tKfwf9QFZW5xB9uynjiSHI  -->
+        <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIALYwKitL-tKfwf9QFZW5xB9uynjiSHI&callback=initMap&libraries=visualization&v=weekly"
+            async
+        ></script>
+
+
+        <!-- Reference:  https://stackoverflow.com/questions/36345303/google-maps-api-heatmap-search-cannot-merge-into-single-map
+                    https://stackoverflow.com/questions/13689705/how-to-add-google-maps-autocomplete-search-box
+                    https://stackoverflow.com/questions/36085722/using-initmap-and-initautocomplete-on-same-html-page-google-maps -->
+
+    </body>
+</html>
