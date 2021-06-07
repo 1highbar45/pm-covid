@@ -2,38 +2,30 @@
 // parameter when you first load the API. For example:
 // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=visualization">
 
-// function initialize() {
-//     initMap();
-//     initAutocomplete();
-// }
-
 let map, heatmap;
 
-function initMap() {
-    map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 15,
-        // center: { lat: 37.775, lng: -122.434 },
-        center: { lat: 10.76347152, lng: 106.6826186 },
-        // mapTypeId: "satellite",
-        // mapTypeId: "hybrid",
-        mapTypeId: "terrain",
-        // mapTypeId: "roadmap",
-    });
+// function initMap() {
+//     map = new google.maps.Map(document.getElementById("map"), {
+//         zoom: 13,
+//         center: {
+//             lat: 37.775,
+//             lng: -122.434,
+//         },
+//         mapTypeId: google.maps.MapTypeId.SATELLITE,
+//     });
 
-    heatmap = new google.maps.visualization.HeatmapLayer({
-        data: getPoints(),
-        map: map,
-    });
-
-    initAutocomplete();
-}
+//     heatmap = new google.maps.visualization.HeatmapLayer({
+//         data: getPoints(),
+//         map: map,
+//     });
+// }
 
 function toggleHeatmap() {
     heatmap.setMap(heatmap.getMap() ? null : map);
 }
 
 // function changeGradient() {
-//     const gradient = [
+//     var gradient = [
 //         "rgba(0, 255, 255, 0)",
 //         "rgba(0, 255, 255, 1)",
 //         "rgba(0, 191, 255, 1)",
@@ -63,43 +55,62 @@ function changeRadius() {
 // Heatmap data: 500 Points
 function getPoints() {
     return [
-        //hcm
         new google.maps.LatLng(10.76347152, 106.6826186),
         new google.maps.LatLng(10.80862326, 106.6700902),
     ];
 }
+// This example adds a search box to a map, using the Google Place Autocomplete
+// feature. People can enter geographical searches. The search box will return a
+// pick list containing a mix of places and predicted search terms.
 
-// Search box autocomplete
+// This example requires the Places library. Include the libraries=places
+// parameter when you first load the API. For example:
+// <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
 function initAutocomplete() {
+    const map = new google.maps.Map(document.getElementById("map"), {
+        center: {
+            lat: 10.76347152,
+            lng: 106.6826186,
+        },
+        zoom: 15,
+        mapTypeId: "terrain",
+    });
+
+    heatmap = new google.maps.visualization.HeatmapLayer({
+        data: getPoints(),
+        map: map,
+    });
+
     // Create the search box and link it to the UI element.
     const input = document.getElementById("pac-input");
     const searchBox = new google.maps.places.SearchBox(input);
-    map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+    // map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
     // Bias the SearchBox results towards current map's viewport.
-    map.addListener("bounds_changed", () => {
+    map.addListener("bounds_changed", function () {
         searchBox.setBounds(map.getBounds());
     });
+
     let markers = [];
     // Listen for the event fired when the user selects a prediction and retrieve
     // more details for that place.
-    searchBox.addListener("places_changed", () => {
+    searchBox.addListener("places_changed", function () {
         const places = searchBox.getPlaces();
 
         if (places.length == 0) {
             return;
         }
+
         // Clear out the old markers.
-        markers.forEach((marker) => {
+        markers.forEach(function (marker) {
             marker.setMap(null);
         });
         markers = [];
+
         // For each place, get the icon, name and location.
         const bounds = new google.maps.LatLngBounds();
-        places.forEach((place) => {
-            if (!place.geometry || !place.geometry.location) {
-                console.log("Returned place contains no geometry");
-                return;
-            }
+        places.forEach(function (place) {
             const icon = {
                 url: place.icon,
                 size: new google.maps.Size(71, 71),
@@ -107,11 +118,12 @@ function initAutocomplete() {
                 anchor: new google.maps.Point(17, 34),
                 scaledSize: new google.maps.Size(25, 25),
             };
+
             // Create a marker for each place.
             markers.push(
                 new google.maps.Marker({
-                    map,
-                    icon,
+                    map: map,
+                    icon: icon,
                     title: place.name,
                     position: place.geometry.location,
                 })
@@ -127,4 +139,7 @@ function initAutocomplete() {
         map.fitBounds(bounds);
     });
 }
-// Search box autocomplete - End
+// google.maps.event.addDomListener(window, "load", function () {
+//     initMap();
+//     initAutocomplete();
+// });
