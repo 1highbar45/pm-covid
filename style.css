@@ -1,16 +1,56 @@
 html,
-body,
-#map {
+body {
     height: 100%;
     margin: 0;
     padding: 0;
 }
 
-#map {
-    height: 100%;
+/* .nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+} */
+
+.navbar {
+    background-color: #4d90fe;
 }
 
-#floating-panel {
+/* #map {
+    margin-top: 50px;
+    height: 70%;
+    width: 70%;
+    position: relative;
+    float: left;
+} */
+.map-style {
+    padding: auto 0;
+}
+
+.map-style #map {
+    height: 500px;
+    margin-bottom: 20px;
+    border: 1px solid #999;
+}
+
+.map-style #floating-panel {
+    margin: 10px auto;
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #999;
+    text-align: center;
+    font-family: "Roboto", "sans-serif";
+    line-height: 30px;
+    padding-left: 10px;
+}
+
+.btn {
+    border: 1px solid #999;
+    font-size: 13px;
+    font-family: "Roboto", "sans-serif";
+    padding: 0 auto;
+    /* background-color: #a9a9a9; */
+}
+
+/* #floating-panel {
     position: absolute;
     top: 10px;
     left: 25%;
@@ -22,19 +62,10 @@ body,
     font-family: "Roboto", "sans-serif";
     line-height: 30px;
     padding-left: 10px;
-}
-
-#floating-panel {
-    background-color: #fff;
-    border: 1px solid #999;
-    left: 25%;
-    padding: 5px;
-    position: absolute;
-    top: 10px;
-    z-index: 5;
-}
+} */
 
 #pac-input {
+    float: left;
     background-color: #fff;
     font-family: Roboto;
     font-size: 15px;
@@ -42,13 +73,19 @@ body,
     margin-left: 12px;
     padding: 0 11px 0 13px;
     text-overflow: ellipsis;
-    width: 300px;
+    width: 400px;
 }
 
-#pac-input:focus {
+.dropdown {
+    height: 30px;
+    border-radius: 5%;
+    float: right;
+}
+
+/* #pac-input:focus {
     border-color: #4d90fe;
-}
-
-.pac-container {
-    font-family: Roboto;
+} */
+.chart {
+    border: 1px solid #999;
+    height: 500px;
 }

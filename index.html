@@ -3,23 +3,62 @@
     <head>
         <title>Heatmap</title>
         <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+        <!-- BOOTSTRAP-4  -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+            integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+            crossorigin="anonymous"
+        />
+        <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="./style.css" />
+        <!-- JS  -->
         <script src="./index.js"></script>
     </head>
     <body>
-        <div id="floating-panel">
-            <button onclick="toggleHeatmap()">Toggle Heatmap</button>
-            <!-- <button onclick="changeGradient()">Change gradient</button> -->
-            <button onclick="changeRadius()">Change radius</button>
-            <!-- <button onclick="changeOpacity()">Change opacity</button> -->
-            <input
-                id="pac-input"
-                class="controls"
-                type="text"
-                placeholder="Search Box"
-            />
+        <!-- Header -->
+        <nav class="navbar navbar-light">
+            <a class="navbar-brand" href="#">
+                <img src="./img/logo.png" width="100" height="60" alt="" />
+            </a>
+        </nav>
+
+        <!-- Map  -->
+
+        <div class="map-style container-fluid">
+            <div class="row">
+                <div class="col-5"></div>
+                <div class="col-7">
+                    <div id="floating-panel">
+                        <input
+                            id="pac-input"
+                            class="controls"
+                            type="text"
+                            placeholder="Search Box"
+                        />
+                        <button class="btn toggle" onclick="toggleHeatmap()">
+                            Toggle Heatmap
+                        </button>
+                        <!-- <button onclick="changeGradient()">Change gradient</button> -->
+                        <button class="btn radius" onclick="changeRadius()">
+                            Change radius
+                        </button>
+                        <!-- <button onclick="changeOpacity()">Change opacity</button> -->
+                        <select class="dropdown" name="" id="selQuan">
+                            <option>---Chọn quận---</option>
+                            <option value="tp">Tân Phú</option>
+                            <option value="gv">Gò Vấp</option>
+                            <option value="bc">Bình Chánh</option>
+                            <option value="bt">Bình Thạnh</option>
+                        </select>
+                    </div>
+                    <div id="map"></div>
+                    <div class="chart">
+                        <img src="./img/piechart.png" alt="" />
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="map"></div>
 
         <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
 
@@ -36,4 +75,3 @@
                     https://stackoverflow.com/questions/36085722/using-initmap-and-initautocomplete-on-same-html-page-google-maps -->
     </body>
 </html>
-

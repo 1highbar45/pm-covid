@@ -68,7 +68,8 @@ function getPoints() {
 // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
 
 function initAutocomplete() {
-    const map = new google.maps.Map(document.getElementById("map"), {
+    // create google map
+    map = new google.maps.Map(document.getElementById("map"), {
         center: {
             lat: 10.76347152,
             lng: 106.6826186,
@@ -77,6 +78,7 @@ function initAutocomplete() {
         mapTypeId: "terrain",
     });
 
+    // add heatmap layer
     heatmap = new google.maps.visualization.HeatmapLayer({
         data: getPoints(),
         map: map,
@@ -139,6 +141,37 @@ function initAutocomplete() {
         map.fitBounds(bounds);
     });
 }
+
+// function selectedLocation() {
+//     let select = document.getElementById("selQuan").value;
+//     if (select === "bc") {
+//         // let bc = new google.maps.LatLng(10.79603962, 106.6999017);
+//         map.setCenter({ lat: 10.79603962, lng: 106.6999017 });
+//         map.setZoom(15);
+//     } else if (select === "gv") {
+//         // let gv = new google.maps.LatLng(10.84705169, 106.654992);
+//         map.setCenter({ lat: 10.84705169, lng: 106.654992 });
+//         map.setZoom(15);
+//     }
+// }
+
+function selectedLocation() {
+    let select = document.getElementById("selQuan");
+    let sl = "";
+    if (select) {
+        sl = select.value;
+        if (sl === "bc") {
+            // let bc = new google.maps.LatLng(10.79603962, 106.6999017);
+            map.setCenter({ lat: 10.79603962, lng: 106.6999017 });
+            map.setZoom(15);
+        } else if (sl === "gv") {
+            // let gv = new google.maps.LatLng(10.79603962, 106.6999017);
+            map.setCenter({ lat: 10.79603962, lng: 106.6999017 });
+            map.setZoom(15);
+        }
+    }
+}
+console.log(selectedLocation());
 // google.maps.event.addDomListener(window, "load", function () {
 //     initMap();
 //     initAutocomplete();
