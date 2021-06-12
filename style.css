@@ -5,22 +5,37 @@ body {
     padding: 0;
 }
 
-/* .nopadding {
-    padding: 0 !important;
-    margin: 0 !important;
-} */
-
-.navbar {
-    background-color: #4d90fe;
+#map{
+    height: 500px;
+    margin: 0.5rem;
 }
 
-/* #map {
-    margin-top: 50px;
-    height: 70%;
-    width: 70%;
-    position: relative;
-    float: left;
-} */
+.chart {
+    margin:0.5rem;
+    border: 1px solid #999;
+    height: 500px;
+}
+
+
+.side-bar{
+    text-align:left;
+    margin: 0.5rem;
+    border: solid gray 1px;
+    width: auto;
+    height: 100%;
+}
+
+.navbar {
+    margin:0.5rem;
+    background-color: transparent;
+    border: solid gray 1px;
+}
+
+.map-container {
+    margin: 0.5rem;
+    border: solid gray 1px;
+}
+
 .map-style {
     padding: auto 0;
 }
@@ -32,7 +47,7 @@ body {
 }
 
 .map-style #floating-panel {
-    margin: 10px auto;
+    margin: 0.5rem;
     background-color: #fff;
     padding: 5px;
     border: 1px solid #999;
@@ -49,20 +64,6 @@ body {
     padding: 0 auto;
     /* background-color: #a9a9a9; */
 }
-
-/* #floating-panel {
-    position: absolute;
-    top: 10px;
-    left: 25%;
-    z-index: 5;
-    background-color: #fff;
-    padding: 5px;
-    border: 1px solid #999;
-    text-align: center;
-    font-family: "Roboto", "sans-serif";
-    line-height: 30px;
-    padding-left: 10px;
-} */
 
 #pac-input {
     float: left;
@@ -82,10 +83,4 @@ body {
     float: right;
 }
 
-/* #pac-input:focus {
-    border-color: #4d90fe;
-} */
-.chart {
-    border: 1px solid #999;
-    height: 500px;
-}
+
