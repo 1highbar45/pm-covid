@@ -59,7 +59,8 @@ function initAutocomplete() {
                 lng: location[7],
             },
         ];
-    }, 1);
+    });
+
     locations = locations.slice(1);
     console.log(locations);
 
@@ -80,4 +81,7 @@ function initAutocomplete() {
 
     // Render heat map layer
     renderHeatMapLayer(locations);
+
+    // Render search box output
+    renderSearchBox();
 }

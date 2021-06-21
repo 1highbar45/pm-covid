@@ -67,30 +67,37 @@
                                         >
                                             Toggle Heatmap
                                         </button>
-                                        <button
+                                        <!-- <button
                                             class="btn btn-primary radius"
                                             onclick="changeRadius()"
                                         >
                                             Change radius
-                                        </button>
+                                        </button> -->
 
-                                        <div class="dropdown">
-                                            <button
+                                        <!-- Dropdown setCenter  -->
+                                        <form action="#">
+                                            <select
+                                                onchange="selectedLocation()"
+                                                id="location"
                                                 class="
-                                                    btn btn-primary
-                                                    dropdown-toggle
+                                                    bg-primary
+                                                    text-white text-center
                                                 "
-                                                type="button"
-                                                data-toggle="dropdown"
                                             >
-                                                Quận <span class="caret"></span>
-                                            </button>
-                                            <ul class="dropdown-menu">
-                                                <li>Gò vấp</li>
-                                                <li>Bình Thạnh</li>
-                                                <li>Tân Phú</li>
-                                            </ul>
-                                        </div>
+                                                <option>
+                                                    --Chọn Khu Vực--
+                                                </option>
+                                                <option value="gv">
+                                                    Gò vấp
+                                                </option>
+                                                <option value="bt">
+                                                    Bình Thạnh
+                                                </option>
+                                                <option value="tp">
+                                                    Tân Phú
+                                                </option>
+                                            </select>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -123,6 +130,8 @@
         <script src="./view/my_view/sidebar.js"></script>
         <script src="./view/google_view/marker.js"></script>
         <script src="./view/google_view/heatmap.js"></script>
+        <script src="./view/google_view/searchbox.js"></script>
+        <script src="./button/district.js"></script>
 
         <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
         <!-- api key  = AIzaSyCgjLOKkfXaJwpXWMNC8UflIlx56mflLWo -->
