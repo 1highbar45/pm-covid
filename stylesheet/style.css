@@ -3,23 +3,22 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: 'Inter','Roboto';
+    font-family: "Inter", "Roboto";
 }
 
-#map{
+#map {
     height: 500px;
     margin: 0.5rem;
 }
 
 .chart {
-    margin:0.5rem;
+    margin: 0.5rem;
     border: 1px solid #999;
     height: 500px;
 }
 
-
-.side-bar{
-    text-align:left;
+.side-bar {
+    text-align: left;
     margin: 0.5rem;
     border: solid gray 1px;
     width: auto;
@@ -27,7 +26,7 @@ body {
 }
 
 .navbar {
-    margin:0.5rem;
+    margin: 0.5rem;
     background-color: transparent;
     border: solid gray 1px;
 }
@@ -78,10 +77,9 @@ body {
     width: 400px;
 }
 
-.dropdown {
-    height: 30px;
+select {
+    height: 40px;
+    width: 100%;
     border-radius: 5%;
-    float: right;
+    font-size: 13px;
 }
-
-
