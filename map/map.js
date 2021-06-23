@@ -51,8 +51,16 @@ function initAutocomplete() {
 
       // Render search box output
       renderSearchBox();
+
+      //Render Pie Chart
+      renderPieChart(locations)
+
+      //Render Line Chart
+      renderLineChart(locations)
+      
     })
     .catch((e) => console.log(e));
   //------------------API call (not yet used)---------------
-
 }
+
+
