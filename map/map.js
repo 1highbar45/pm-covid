@@ -1,5 +1,6 @@
 let map, heatmap;
 function initAutocomplete() {
+
   // create google map
   // load map at defined lat and lng
   map = new google.maps.Map(document.getElementById("map"), {
@@ -56,5 +57,3 @@ function initAutocomplete() {
     .catch((e) => console.log(e));
   //------------------API call (not yet used)---------------
 }
-
-
