@@ -37,7 +37,7 @@ function renderPieChart(locations) {
     //titlePosition: "none",
     legend: { position: "none" },
     chartArea: {},
-    width: "50%",
+    //width: "100%",
     height: 400,
     is3D: true,
   };
@@ -95,7 +95,7 @@ function renderLineChart(locations) {
 
   let options = {
     title: "Số khu cách ly ở TP.HCM",
-    width: "50%",
+    //width: '500',
     height: 400,
     hAxis: {
       format: "d/M",
