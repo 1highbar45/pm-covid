@@ -93,20 +93,6 @@ function renderLineChart(locations) {
         },
     };
 
-    let options = {
-        title: "Số khu cách ly ở TP.HCM",
-        width: "50%",
-        height: 400,
-        hAxis: {
-            format: "d/M",
-            gridlines: { count: 15 },
-        },
-        vAxis: {
-            gridlines: { color: "none" },
-            minValue: 0,
-        },
-    };
-
     // let data = google.visualization.arrayToDataTable([
     //   ['Year', 'Sales'],
     //   ['2004',  1000],
