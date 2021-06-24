@@ -30,111 +30,139 @@
         </script>
     </head>
 
-    <body>
-        <!-- Header -->
-        <div class="container-fluid">
-            <nav class="navbar navbar-light">
-                <a class="navbar-brand" href="#">
-                    <img src="./img/logo.png" width="100" height="60" alt="" />
-                </a>
-            </nav>
-        </div>
+  <body>
+    <!-- Header -->
+    <div class="container-fluid">
+      <nav class="navbar navbar-light">
+        <a class="navbar-brand" href="#">
+          <img src="./img/logo.png" width="100" height="60" alt="" />
+        </a>
+      </nav>
+    </div>
 
-        <!-- Map  -->
-        <div class="container-fluid map-style">
+    <!-- Map and closed locations  -->
+    <div class="container-fluid map-style">
+      <div class="row">
+        <div class="col-12">
+          <div class="my-container">
+            <!-- Input row -->
             <div class="row">
-                <div class="col-3">
-                    <div class="side-bar" id="side-bar-new">
-                        This is side bar
-                    </div>
+              <div class="container-fluid">
+                <div id="floating-panel">
+                  <div class="row">
+                    <input
+                      id="pac-input"
+                      class="controls"
+                      type="text"
+                      placeholder="Search Box"
+                    />
+                    <button class="btn btn-primary toggle" id="btn_search">
+                      Search
+                    </button>
+                    <button
+                      class="btn btn-primary toggle"
+                      id="btn_toggle_heatmap"
+                    >
+                      Toggle Heatmap
+                    </button>
+                    <form action="#">
+                      <select
+                        onchange="selectedLocation()"
+                        id="location"
+                        class="bg-primary text-white text-center"
+                      >
+                        <option>--Chọn Khu Vực--</option>
+                        <option value="gv">Gò vấp</option>
+                        <option value="bt">Bình Thạnh</option>
+                        <option value="tp">Tân Phú</option>
+                      </select>
+                    </form>
+                  </div>
                 </div>
-                <div class="col-9">
-                    <div class="map-container">
-                        <div class="row">
-                            <div class="container-fluid">
-                                <div id="floating-panel">
-                                    <div class="row">
-                                        <input
-                                            id="pac-input"
-                                            class="controls"
-                                            type="text"
-                                            placeholder="Search Box"
-                                        />
-                                        <button
-                                            class="btn btn-primary toggle"
-                                            id="btn_search"
-                                        >
-                                            Search
-                                        </button>
-                                        <button
-                                            class="btn btn-primary toggle"
-                                            id="btn_toggle_heatmap"
-                                        >
-                                            Toggle Heatmap
-                                        </button>
-                                        <!-- <button
-                                            class="btn btn-primary radius"
-                                            onclick="changeRadius()"
-                                        >
-                                            Change radius
-                                        </button> -->
+              </div>
+            </div>
 
-                                        <!-- Dropdown setCenter  -->
-                                        <form action="#">
-                                            <select
-                                                onchange="selectedLocation()"
-                                                id="location"
-                                                class="
-                                                    bg-primary
-                                                    text-white text-center
-                                                "
-                                            >
-                                                <option>
-                                                    --Chọn Khu Vực--
-                                                </option>
-                                                <option value="gv">
-                                                    Gò vấp
-                                                </option>
-                                                <option value="bt">
-                                                    Bình Thạnh
-                                                </option>
-                                                <option value="tp">
-                                                    Tân Phú
-                                                </option>
-                                            </select>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="container-fluid">
-                                <div id="map"></div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-12 col-lg-6">
-                                <div id="piechart"></div>
-                            </div>
-                            <div class="col-md-12 col-lg-6">
-                                <div id="linechart"></div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="row">
+              <div class="container-fluid">
+             
+                  <div id="map"></div>
+          
+              </div>
+            </div>
+            <div class="row">
+              <div class="container-fluid close-location-container">
+                <div class="close-location-bar" id="close-locationp-bar">
+                  DISPLAY CLOSED INFECTED LOCATION , PLEASE INPUT YOUR LOCATION
                 </div>
+              </div>
+            </div>
+
+            <!-- Google Chart
+            <div class="row">
+              <div class="col-md-12 col-lg-6">
+                <div id="piechart"></div>
+              </div>
+              <div class="col-md-12 col-lg-6">
+                <div id="linechart"></div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Map and closed locations  -->
+
+    <!-- Chart and genral location information   -->
+    <div class="container-fluid map-style">
+      <div class="row">
+        <div class="col-12">
+          <div class="my-container">
+            <div class="row">
+              <div class="col-3">
+                <div class="my-container">
+                  <div class="side-bar" id="side-bar-new">This is side bar</div>
+                </div>
+              </div>
+              <div class="col-9">
+                <div class="my-container">
+                  <!-- Google Chart -->
+                  <div class="row">
+                    <div class="col-md-12 col-lg-6">
+                      <div class="chart-container">
+                        <div class="" id="piechart"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 col-lg-6">
+                      <div class="chart-container">
+                        <div class="" id="linechart"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="my-container">
+                        TABLE CONTAIN HISTORY OF ALL LOCATION
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
         </div>
+      </div>
+    </div>
+    <!-- Chart and genral location information   -->
 
-        <!-- Custom JS -->
-        <script src="./data/data.js"></script>
-        <script src="./chart/chart.js"></script>
+    <!-- Custom JS -->
+    <script src="./data/data.js"></script>
+    <script src="./chart/chart.js"></script>
 
-        <script src="./view/my_view/sidebar.js"></script>
-        <script src="./view/google_view/marker.js"></script>
-        <script src="./view/google_view/heatmap.js"></script>
-        <script src="./view/google_view/searchbox.js"></script>
-        <script src="./button/district.js"></script>
+    <script src="./view/my_view/sidebar.js"></script>
+    <script src="./view/google_view/marker.js"></script>
+    <script src="./view/google_view/heatmap.js"></script>
+    <script src="./view/google_view/searchbox.js"></script>
+    <script src="./button/district.js"></script>
 
         <script src="./map/map.js"></script>
         <!-- Async script executes immediately and must be after any DOM elements used in callback. -->

@@ -37,7 +37,7 @@ function renderPieChart(locations) {
         //titlePosition: "none",
         legend: { position: "none" },
         chartArea: {},
-        width: "50%",
+        //width: "100%",
         height: 400,
         is3D: true,
     };
@@ -79,23 +79,19 @@ function renderLineChart(locations) {
     data.addColumn("date", "Ngày");
     data.addColumn("number", "Số khu cách ly");
 
-    const dateFormat = dateList[0].date.split("/");
-    const newDate = new Date(
-        `${dateFormat[2]}-${dateFormat[1]}-${dateFormat[0]}`
-    );
-    console.log(newDate);
-    console.log(dateList[0].num);
-    let rows = [];
-    for (const element of dateList) {
-        // Take day, month ,year from date format date/month/year
-        const dateFormat = element.date.split("/");
-        rows.push([
-            new Date(`${dateFormat[2]}-${dateFormat[1]}-${dateFormat[0]}`),
-            element.num,
-        ]);
-    }
-    console.log(rows);
-    data.addRows(rows);
+    let options = {
+        title: "Số khu cách ly ở TP.HCM",
+        //width: '500',
+        height: 400,
+        hAxis: {
+            format: "d/M",
+            gridlines: { count: 15 },
+        },
+        vAxis: {
+            gridlines: { color: "none" },
+            minValue: 0,
+        },
+    };
 
     let options = {
         title: "Số khu cách ly ở TP.HCM",
