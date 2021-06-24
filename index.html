@@ -40,14 +40,12 @@
       </nav>
     </div>
 
-    <!-- Map  -->
+    <!-- Map and closed locations  -->
     <div class="container-fluid map-style">
       <div class="row">
-        <div class="col-3">
-          <div class="side-bar" id="side-bar-new">This is side bar</div>
-        </div>
-        <div class="col-9">
-          <div class="map-container">
+        <div class="col-12">
+          <div class="my-container">
+            <!-- Input row -->
             <div class="row">
               <div class="container-fluid">
                 <div id="floating-panel">
@@ -58,10 +56,7 @@
                       type="text"
                       placeholder="Search Box"
                     />
-                    <button
-                      class="btn btn-primary toggle"
-                      id="btn_search"
-                    >
+                    <button class="btn btn-primary toggle" id="btn_search">
                       Search
                     </button>
                     <button
@@ -70,14 +65,6 @@
                     >
                       Toggle Heatmap
                     </button>
-                    <!-- <button
-                                            class="btn btn-primary radius"
-                                            onclick="changeRadius()"
-                                        >
-                                            Change radius
-                                        </button> -->
-
-                    <!-- Dropdown setCenter  -->
                     <form action="#">
                       <select
                         onchange="selectedLocation()"
@@ -94,12 +81,23 @@
                 </div>
               </div>
             </div>
+
             <div class="row">
               <div class="container-fluid">
-                <div id="map"></div>
+             
+                  <div id="map"></div>
+          
+              </div>
+            </div>
+            <div class="row">
+              <div class="container-fluid close-location-container">
+                <div class="close-location-bar" id="close-locationp-bar">
+                  DISPLAY CLOSED INFECTED LOCATION , PLEASE INPUT YOUR LOCATION
+                </div>
               </div>
             </div>
 
+            <!-- Google Chart
             <div class="row">
               <div class="col-md-12 col-lg-6">
                 <div id="piechart"></div>
@@ -107,16 +105,60 @@
               <div class="col-md-12 col-lg-6">
                 <div id="linechart"></div>
               </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Map and closed locations  -->
+
+    <!-- Chart and genral location information   -->
+    <div class="container-fluid map-style">
+      <div class="row">
+        <div class="col-12">
+          <div class="my-container">
+            <div class="row">
+              <div class="col-3">
+                <div class="my-container">
+                  <div class="side-bar" id="side-bar-new">This is side bar</div>
+                </div>
+              </div>
+              <div class="col-9">
+                <div class="my-container">
+                  <!-- Google Chart -->
+                  <div class="row">
+                    <div class="col-md-12 col-lg-6">
+                      <div class="chart-container">
+                        <div class="" id="piechart"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 col-lg-6">
+                      <div class="chart-container">
+                        <div class="" id="linechart"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="my-container">
+                        TABLE CONTAIN HISTORY OF ALL LOCATION
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <!-- Chart and genral location information   -->
 
     <!-- Custom JS -->
     <script src="./data/data.js"></script>
     <script src="./chart/chart.js"></script>
-   
+
     <script src="./view/my_view/sidebar.js"></script>
     <script src="./view/google_view/marker.js"></script>
     <script src="./view/google_view/heatmap.js"></script>

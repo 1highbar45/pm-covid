@@ -43,12 +43,6 @@ function initAutocomplete() {
       // Render locations as heat point (heat map layer)
       renderHeatMapLayer(locations);
 
-      // Render newest location on side bar
-      renderSideBarNew(locations);
-
-      // Render heat map layer
-      renderHeatMapLayer(locations);
-
       // Render search box output
       renderSearchBox();
 

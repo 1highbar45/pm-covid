@@ -9,20 +9,33 @@ body {
 #map {
     height: 500px;
     margin: 0.5rem;
+    
 }
 
-.chart {
+.chart-container {
     margin: 0.5rem;
     border: 1px solid #999;
-    height: 500px;
+    
 }
 
-.side-bar {
+#piechart {
+    width: 100%;
+}
+
+#linechart{
+    width: 100%;
+}
+
+.close-location-bar {
     text-align: left;
     margin: 0.5rem;
     border: solid gray 1px;
     width: auto;
     height: 100%;
+}
+
+.close-location-container {
+    margin-bottom: auto;
 }
 
 .navbar {
@@ -31,7 +44,7 @@ body {
     border: solid gray 1px;
 }
 
-.map-container {
+.my-container {
     margin: 0.5rem;
     border: solid gray 1px;
 }
