@@ -36,34 +36,62 @@
 
     <!-- Map and closed locations  -->
     <div class="container-fluid map-style">
-        <div class="row">
-            <div class="col-12">
-                <div class="my-container">
-                    <!-- Input row -->
-                    <div class="row">
-                        <div class="container-fluid">
-                            <div id="floating-panel">
-                                <div class="row">
-                                    <input id="pac-input" class="controls" type="text" placeholder="Search Box" />
-                                    <button class="btn btn-primary toggle" id="btn_search">
-                                        Search
-                                    </button>
-                                    <button class="btn btn-primary toggle" id="btn_toggle_heatmap">
-                                        Toggle Heatmap
-                                    </button>
-                                    <form action="#">
-                                        <select onchange="selectedLocation()" id="location"
-                                            class="bg-primary text-white text-center">
-                                            <option>--Chọn Khu Vực--</option>
-                                            <option value="gv">Gò vấp</option>
-                                            <option value="bt">Bình Thạnh</option>
-                                            <option value="tp">Tân Phú</option>
-                                        </select>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="my-container">
+            <!-- Input row -->
+            <div class="row">
+              <div class="container-fluid">
+                <div id="floating-panel">
+                  <div class="row">
+                    <input
+                      id="pac-input"
+                      class="controls"
+                      type="text"
+                      placeholder="Search Box"
+                    />
+                    <button class="btn btn-primary toggle" id="btn_search">
+                      Search
+                    </button>
+                    <button
+                      class="btn btn-primary toggle"
+                      id="btn_toggle_heatmap"
+                    >
+                      Toggle Heatmap
+                    </button>
+                    <form action="#">
+                      <select
+                        onchange="selectedLocation()"
+                        id="location"
+                        class="bg-primary text-white text-center"
+                      >
+                        <option>--Chọn Khu Vực--</option>
+                        <option value="gv">Gò vấp</option>
+                        <option value="bt">Bình Thạnh</option>
+                        <option value="tp">Tân Phú</option>
+                        <option value="1">1</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="td">TP Thủ Đức</option>
+                        <option value="cc">Củ Chi</option>
+                        <option value="hm">Hóc Môn</option>
+                        <option value="bc">Bình Chánh</option>
+                        <option value="nb">Nhà Bè</option>
+                        <option value="cg">Cần Giờ</option>
+                        <option value="bt">Bình Tân</option>
+                      </select>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
 
                     <div class="row">
                         <div class="container-fluid">
