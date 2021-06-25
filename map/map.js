@@ -1,4 +1,4 @@
-let map, heatmap;
+let map, heatmap
 function initAutocomplete() {
 
   // create google map
@@ -40,9 +40,12 @@ function initAutocomplete() {
       renderSideBarNew(locations);
 
       // Render history bar
+      renderHistoryRows(locations)
+      moreRows_global_locations = locations 
 
       // Render locations as Markers
       renderMapMarker(locations);
+
       // Render locations as heat point (heat map layer)
       renderHeatMapLayer(locations);
 
@@ -55,8 +58,6 @@ function initAutocomplete() {
       //Render Line Chart
       renderLineChart(locations)
 
-      
-      
     })
     .catch((e) => console.log(e));
   //------------------API call (not yet used)---------------
