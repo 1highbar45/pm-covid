@@ -39,6 +39,8 @@ function initAutocomplete() {
       // Render newest location on side bar
       renderSideBarNew(locations);
 
+      // Render history bar
+
       // Render locations as Markers
       renderMapMarker(locations);
       // Render locations as heat point (heat map layer)
@@ -52,6 +54,8 @@ function initAutocomplete() {
 
       //Render Line Chart
       renderLineChart(locations)
+
+      
       
     })
     .catch((e) => console.log(e));

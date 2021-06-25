@@ -33,7 +33,7 @@ function renderPieChart(locations) {
   let data = google.visualization.arrayToDataTable(schemmaArr);
 
   let options = {
-    title: "Các quận ở TP.HCM",
+    title: "Khu phong tỏa theo quận",
     //titlePosition: "none",
     legend: { position: "none" },
     chartArea: {},
@@ -78,7 +78,7 @@ function renderLineChart(locations) {
 
   let data = new google.visualization.DataTable();
   data.addColumn("date", "Ngày");
-  data.addColumn("number", "Số khu cách ly");
+  data.addColumn("number", "Số khu phong tỏa");
   
   const dateFormat = dateList[0].date.split('/')
   const newDate = new Date(`${dateFormat[2]}-${dateFormat[1]}-${dateFormat[0]}`)
@@ -94,7 +94,7 @@ function renderLineChart(locations) {
   data.addRows(rows)
 
   let options = {
-    title: "Số khu cách ly ở TP.HCM",
+    title: "Khu phong tỏa",
     //width: '500',
     height: 400,
     hAxis: {
