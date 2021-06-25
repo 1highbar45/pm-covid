@@ -137,7 +137,8 @@
             <div class="row">
               <div class="col-3">
                 <div class="my-container">
-                  <div class="side-bar" id="side-bar-new">This is side bar</div>
+                  <div>Khu vực phong tỏa mới hôm nay</div>
+                  <div class="side-bar" id="side-bar-new">This is side bar new data</div>
                 </div>
               </div>
               <div class="col-9">
@@ -157,10 +158,25 @@
                   </div>
 
                   <div class="row">
-                    <div class="col-12">
+                    <div class="col-12 ">
                       <div class="my-container">
                         TABLE CONTAIN HISTORY OF ALL LOCATION
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th scope="col">#</th>
+                              <th scope="col">Ngày</th>
+                              <th scope="col">Địa chỉ</th>
+                              <th scope="col">Quận</th>
+                            </tr>
+                          </thead>
+                          <tbody class="my-tbody" id="history-tbody">
+                          </tbody>
+                        </table>
                       </div>
+                    </div>
+                    <div class="col-12 d-flex justify-content-center">
+                        <button class="btn btn-primary" onclick='moreRowsHandler()' >Xem thêm</button>
                     </div>
                   </div>
                 </div>
@@ -177,10 +193,12 @@
     <script src="./chart/chart.js"></script>
 
     <script src="./view/my_view/sidebar.js"></script>
+    <script src="./view/my_view/historybar.js"></script>
     <script src="./view/google_view/marker.js"></script>
     <script src="./view/google_view/heatmap.js"></script>
     <script src="./view/google_view/searchbox.js"></script>
     <script src="./button/district.js"></script>
+    <script src="./button/moreRows.js"></script>
 
     <script src="./map/map.js"></script>
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
