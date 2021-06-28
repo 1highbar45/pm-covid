@@ -5,6 +5,11 @@ body {
     padding: 0;
     font-family: "Inter", "Roboto";
     font-size: 14px;
+    font-weight: 600;
+}
+
+button{
+    margin-left: 1rem;
 }
 
 #map {
@@ -102,4 +107,11 @@ select {
     height: 300px;
     overflow-y: auto;
     width: 100%;
+}
+
+.nav-today-container{
+    border: none;
+    border-radius: 8px;
+    background-color: #eff2f5;
+    padding: 1rem;
 }
