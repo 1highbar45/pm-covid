@@ -94,6 +94,12 @@ function selectedLocation() {
         map.setCenter(canGio);
         map.setZoom(15);
     }
+    else 
+    {
+        var hcmc = new google.maps.LatLng(10.711113309964588, 106.6428102655986);
+        map.setCenter(hcmc);
+        map.setZoom(10);
+    }
     
 }
 
