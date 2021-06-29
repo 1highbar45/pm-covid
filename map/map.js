@@ -17,7 +17,6 @@ function initAutocomplete() {
     .then((response) => {
       const data = response;
 
-      let locations = [];
       data.map((location) => {
         locations = [
           ...locations,
@@ -41,11 +40,10 @@ function initAutocomplete() {
 
       // Render history bar
       renderHistoryRows(locations)
-      moreRows_global_locations = locations 
+      locations_global = locations 
 
       // Render locations as Markers
       renderMapMarker(locations);
-
       // Render locations as heat point (heat map layer)
       renderHeatMapLayer(locations);
 

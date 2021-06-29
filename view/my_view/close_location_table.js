@@ -1,0 +1,33 @@
+function renderCloseLocations(userLatLng){
+    const distArr = []
+    for (const location of locations) {
+      const dest = {...location}
+      console.log(dest)
+      const destLatLng = [dest.lat,dest.lng]
+      dest.distance = getDistance(userLatLng,destLatLng)
+      distArr.push(dest)  
+    };
+
+    closeLocation = distArr.filter(location => location.distance < 2000)
+    console.log(closeLocation)
+}
+
+
+function getDistance(origin, destination) {
+    // return distance in meters
+    let lng1 = toRadian(origin[1]),
+        lat1 = toRadian(origin[0]),
+        lng2 = toRadian(destination[1]),
+        lat2 = toRadian(destination[0]);
+
+    let deltaLat = lat2 - lat1;
+    let deltalng = lng2 - lng1;
+
+    let a = Math.pow(Math.sin(deltaLat/2), 2) + Math.cos(lat1) * Math.cos(lat2) * Math.pow(Math.sin(deltalng/2), 2);
+    let c = 2 * Math.asin(Math.sqrt(a));
+    let EARTH_RADIUS = 6371;
+    return c * EARTH_RADIUS * 1000;
+}
+function toRadian(degree) {
+    return degree*Math.PI/180;
+}
