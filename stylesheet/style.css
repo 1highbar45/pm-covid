@@ -41,9 +41,7 @@ img#logo{
     height: 100%;
 }
 
-.close-location-container {
-    margin-bottom: auto;
-}
+
 
 .navbar {
     margin: 0.5rem;
@@ -112,12 +110,10 @@ select {
     border-radius: 8px;
 }
 
-.my-tbody {
-    height: 300px;
-    overflow-y: auto;
-    width: 100%;
-}
 
+.close-location-container {
+    margin-bottom: auto;
+}
 
 .close-location-bar {
     border: none;
@@ -127,13 +123,21 @@ select {
     margin: 2rem 0;
 }
 
-.nav-new-location {
+.sidebar-new-container {
     border-radius: 8px;
     background-color: #d8dbde59;
     padding: 2rem;
     border: none;
 }
 
+.badge {
+    padding: 0.35rem;
+}
+.my-tbody {
+    height: 300px;
+    overflow-y: auto;
+    width: 100%;
+}
 .table-history {
     border-radius: 8px;
     background-color: #d8dbde59;
@@ -141,3 +145,6 @@ select {
     border: none;
 }
 
+.table td , .table th {
+    padding: 1.5rem;
+}

@@ -13,8 +13,10 @@ function renderSearchBox() {
     // Listen for the event fired when the user selects a prediction and retrieve
     // more details for that place.
     searchBox.addListener("places_changed", function () {
-        var places = searchBox.getPlaces();
+        
 
+        var places = searchBox.getPlaces();
+        
         if (places.length == 0) {
             return;
         }
@@ -28,6 +30,7 @@ function renderSearchBox() {
         // For each place, get the icon, name and location.
         var bounds = new google.maps.LatLngBounds();
         places.forEach(function (place) {
+            
             var icon = {
                 url: place.icon,
                 size: new google.maps.Size(71, 71),
@@ -53,6 +56,9 @@ function renderSearchBox() {
                 bounds.extend(place.geometry.location);
             }
         });
+        const userLatLng = [places[0].geometry.location.lat(),places[0].geometry.location.lng()]
+        console.log(userLatLng)
+        renderCloseLocations(userLatLng)
         map.fitBounds(bounds);
     });
 }

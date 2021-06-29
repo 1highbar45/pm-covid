@@ -1,5 +1,4 @@
 //google.charts.setOnLoadCallback(drawChart);
-
 function renderPieChart(locations) {
   let distList = [];
   distList[0] = {
@@ -107,13 +106,7 @@ function renderLineChart(locations) {
     },
   };
 
-  // let data = google.visualization.arrayToDataTable([
-  //   ['Year', 'Sales'],
-  //   ['2004',  1000],
-  //   ['2005',  1170],
-  //   ['2006',  660 ],
-  //   ['2007',  1030]
-  // ]);
+ 
 
   let chart = new google.visualization.LineChart(
     document.getElementById("linechart")
