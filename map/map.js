@@ -45,7 +45,6 @@ function initAutocomplete() {
 
       // Render locations as Markers
       renderMapMarker(locations);
-
       // Render locations as heat point (heat map layer)
       renderHeatMapLayer(locations);
 
