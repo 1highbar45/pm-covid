@@ -56,9 +56,6 @@
                       type="text"
                       placeholder="Search Box"
                     />
-                    <button class="btn btn-primary toggle" id="btn_search">
-                      Search
-                    </button>
                     <button
                       class="btn btn-primary toggle"
                       id="btn_toggle_heatmap"
@@ -92,7 +89,20 @@
             <div class="row">
               <div class="container-fluid close-location-container">
                 <div class="close-location-bar" id="close-locationp-bar">
-                  DISPLAY CLOSED INFECTED LOCATION , PLEASE INPUT YOUR LOCATION
+                  <h5>Khu phong tỏa gần bạn (vui lòng nhập địa chỉ)</h5>
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Khoảng cách (m)</th>
+                        <th scope="col">Ngày</th>
+                        <th scope="col">Địa chỉ</th>
+                        <th scope="col">Phường </th>
+                        <th scope="col">Quận</th>
+                      </tr>
+                    </thead>
+                    <tbody class="my-tbody" id="close-tbody">
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
@@ -119,7 +129,7 @@
           <div class="my-container">
             <div class="row">
               <div class="col-md-3">
-                <div class="my-container nav-new-location">
+                <div class="my-container sidebar-new-container ">
                   <h5>Khu vực phong tỏa mới hôm nay</h5>
                   <div class="side-bar" id="side-bar-new">This is side bar new data</div>
                 </div>

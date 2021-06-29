@@ -6,11 +6,6 @@ body {
     font-family: "Inter", "Roboto";
     font-weight: 600;
     font-size: 14px;
-    font-weight: 600;
-}
-
-button{
-    margin-left: 1rem;
 }
 
 img#logo{
@@ -46,9 +41,7 @@ img#logo{
     height: 100%;
 }
 
-.close-location-container {
-    margin-bottom: auto;
-}
+
 
 .navbar {
     margin: 0.5rem;
@@ -117,15 +110,41 @@ select {
     border-radius: 8px;
 }
 
+
+.close-location-container {
+    margin-bottom: auto;
+}
+
+.close-location-bar {
+    border: none;
+    border-radius: 8px;
+    background-color: #d8dbde59;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.sidebar-new-container {
+    border-radius: 8px;
+    background-color: #d8dbde59;
+    padding: 2rem;
+    border: none;
+}
+
+.badge {
+    padding: 0.35rem;
+}
 .my-tbody {
     height: 300px;
     overflow-y: auto;
     width: 100%;
 }
-
-.nav-today-container{
-    border: none;
+.table-history {
     border-radius: 8px;
-    background-color: #eff2f5;
-    padding: 1rem;
+    background-color: #d8dbde59;
+    padding: 2.5rem;
+    border: none;
+}
+
+.table td , .table th {
+    padding: 1.5rem;
 }

@@ -7,8 +7,25 @@ function renderCloseLocations(userLatLng){
       distArr.push(dest)  
     };
 
-    closeLocation = distArr.filter(location => location.distance < 2000)
-    console.log(closeLocation)
+    closedLocations = distArr.filter(location => location.distance < 2000)
+    console.log(closedLocations)
+    closedLocations.sort((location1,location2) => location1.distance - location2.distance)
+
+
+    const displayLocation = document.getElementById('close-tbody')
+    for (const location of closedLocations){
+        let displayContent = displayLocation.innerHTML
+        displayContent += `
+        <tr>
+      <th scope="row"><span class="badge ${location['distance'] <= 500 ? 'badge-danger' : 'badge-warning'}" >${Math.round(location['distance'],3)}</span></th>
+      <td>${location['date']}</td>
+      <td>${location['address']}</td>
+      <td>${location['ward']}</td>
+      <td>${location['dist']}</td>
+      </tr>
+        `
+        displayLocation.innerHTML = displayContent
+    }
     
 }
 
