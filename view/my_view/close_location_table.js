@@ -2,7 +2,6 @@ function renderCloseLocations(userLatLng){
     const distArr = []
     for (const location of locations) {
       const dest = {...location}
-      console.log(dest)
       const destLatLng = [dest.lat,dest.lng]
       dest.distance = getDistance(userLatLng,destLatLng)
       distArr.push(dest)  
@@ -10,6 +9,7 @@ function renderCloseLocations(userLatLng){
 
     closeLocation = distArr.filter(location => location.distance < 2000)
     console.log(closeLocation)
+    
 }
 
 
