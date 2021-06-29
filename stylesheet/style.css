@@ -9,20 +9,18 @@ body {
 #map {
     height: 500px;
     margin: 0.5rem;
-    
 }
 
 .chart-container {
     margin: 0.5rem;
     border: 1px solid #999;
-    
 }
 
 #piechart {
     width: 100%;
 }
 
-#linechart{
+#linechart {
     width: 100%;
 }
 
