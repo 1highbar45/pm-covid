@@ -145,6 +145,10 @@ select {
     border: none;
 }
 
+.table#close-table {
+    visibility: collapse;
+}
+
 .table td , .table th {
     padding: 1.5rem;
 }

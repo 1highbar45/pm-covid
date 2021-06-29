@@ -7,25 +7,39 @@ function renderCloseLocations(userLatLng){
       distArr.push(dest)  
     };
 
-    closedLocations = distArr.filter(location => location.distance < 2000)
-    console.log(closedLocations)
+    closedLocations = distArr.filter(location => location.distance < 1000)
     closedLocations.sort((location1,location2) => location1.distance - location2.distance)
 
 
     const displayLocation = document.getElementById('close-tbody')
-    for (const location of closedLocations){
-        let displayContent = displayLocation.innerHTML
-        displayContent += `
-        <tr>
-      <th scope="row"><span class="badge ${location['distance'] <= 500 ? 'badge-danger' : 'badge-warning'}" >${Math.round(location['distance'],3)}</span></th>
-      <td>${location['date']}</td>
-      <td>${location['address']}</td>
-      <td>${location['ward']}</td>
-      <td>${location['dist']}</td>
-      </tr>
-        `
-        displayLocation.innerHTML = displayContent
+    const displayAlert = document.getElementById('near-location-alert')
+    const tableDisplay = document.getElementById('close-table')
+
+    // If there are quarantined location nearby (<1000)
+    if (closedLocations.length > 0){
+        displayAlert.innerHTML = `Có ${closedLocations.length} khu vực phong tỏa gần bạn`
+        tableDisplay.style.visibility = 'visible'
+
+        displayLocation.innerHTML = ''
+        for (const location of closedLocations){
+            let displayContent = displayLocation.innerHTML
+            displayContent += `
+            <tr>
+          <th scope="row"><span class="badge ${location['distance'] < 500 ? 'badge-danger' : 'badge-warning'}" >${Math.round(location['distance'],3)}</span></th>
+          <td>${location['date']}</td>
+          <td>${location['address']}</td>
+          <td>${location['ward']}</td>
+          <td>${location['dist']}</td>
+          </tr>
+            `
+            displayLocation.innerHTML = displayContent
+        }
     }
+    else{
+        displayAlert.innerHTML = 'Không có các khu vực phong tỏa gần bạn'
+    }
+
+ 
     
 }
 
