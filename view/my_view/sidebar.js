@@ -6,8 +6,8 @@ function renderSideBarNew(locations){
     let locations_newest_display = ``;
     for (const location of locations_newest) {
       locations_newest_display += `<div class="alert alert-primary">
-      <span class="badge badge-danger">Quận ${location.dist }</span>  
-      <span class="badge badge-danger">Phường ${location.ward }</span>  
+      <span class="badge badge-danger">Q.${location.dist }</span>  
+      <span class="badge badge-danger">P.${location.ward }</span>  
       <br>  
       ${location.address}  
         </div>`;
