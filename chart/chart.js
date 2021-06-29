@@ -1,5 +1,4 @@
 //google.charts.setOnLoadCallback(drawChart);
-
 function renderPieChart(locations) {
   let distList = [];
   distList[0] = {

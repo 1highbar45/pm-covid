@@ -2,7 +2,6 @@ let counter = 0
 function renderHistoryRows (locations) {
     const max = counter + 5
     const historyTable = document.getElementById('history-tbody')
-    console.log("History",locations)
     while (counter < max){
       let newRow = `<tr>
       <th scope="row">${locations[counter]['id']}</th>

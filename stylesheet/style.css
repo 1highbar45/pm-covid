@@ -134,6 +134,10 @@ select {
     border: none;
 }
 
+.badge {
+    padding-top: 0.45rem;
+}
+
 .table-history {
     border-radius: 8px;
     background-color: #d8dbde59;
