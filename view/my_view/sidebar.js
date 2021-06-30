@@ -5,8 +5,10 @@ function renderSideBarNew(locations) {
     let locations_newest_display = ``;
     for (const location of locations_newest) {
         locations_newest_display += `<div class="sidebar-item alert alert-primary">
-      <span class="badge badge-danger">${location.date}</span>    
-      ${location.address}
+        <span class="badge badge-danger">Q.${location.dist}</span>  
+        <span class="badge badge-danger">P.${location.ward}</span>  
+        <br>  
+        ${location.address}  
         </div>`;
     }
     sidebar_new.innerHTML = locations_newest_display;
