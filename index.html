@@ -2,7 +2,6 @@
 <html>
     <head>
         <title>COVID App</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
         <!-- Google Font -->
@@ -184,53 +183,70 @@
         <!-- Chart and genral location information   -->
         <div class="container-fluid map-style">
             <div class="row">
-              <div class="col-md-3">
-                <div class="my-container sidebar-new-container text-center ">
-                  <h5>Khu vực phong tỏa mới hôm nay</h5>
-                  <hr>
-                  <div class="side-bar" id="side-bar-new"></div>
-                  <div class="spinner-border" id="loading-sidebar"></div>
+                <div class="col-md-3">
+                    <div class="my-container sidebar-new-container text-center">
+                        <h5>Khu vực phong tỏa mới hôm nay</h5>
+                        <hr />
+                        <div class="side-bar" id="side-bar-new"></div>
+                        <div class="spinner-border" id="loading-sidebar"></div>
+                    </div>
                 </div>
-              </div>
-              <div class="col-md-9">
-                <div class="my-container">
-                  <!-- Google Chart -->
-                  <div class="row">
-                    <div class="col-md-12 col-lg-6">
-                      <div class="chart-container">
-                        <div class="" id="piechart"></div>
-                      </div>
-                    </div>
-                    <div class="col-md-12 col-lg-6">
-                      <div class="chart-container">
-                        <div class="" id="linechart"></div>
-                      </div>
-                    </div>
-                  </div>
+                <div class="col-md-9">
+                    <div class="my-container">
+                        <!-- Google Chart -->
+                        <div class="row">
+                            <div class="col-md-12 col-lg-6">
+                                <div class="chart-container">
+                                    <div class="" id="piechart"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-lg-6">
+                                <div class="chart-container">
+                                    <div class="" id="linechart"></div>
+                                </div>
+                            </div>
+                        </div>
 
-                  <div class="row">
-                    <div class="col-12 ">
-                      <div class="my-container table-history text-center">
-                        <h5>Tất cả khu vực phong tỏa</h5>
-                        
-                        <table class="table" id="history-table">
-                          <thead>
-                            <tr>
-                              <th scope="col">#</th>
-                              <th scope="col">Ngày</th>
-                              <th scope="col">Địa chỉ</th>
-                              <th scope="col">Quận</th>
-                            </tr>
-                            
-                          </thead>
-                          <tbody class="my-tbody" id="history-tbody">
-                          </tbody>
-                        </table>
-                        <div class="spinner-border" id="history-loading"></div>
-                      </div>
-                    </div>
-                    <div class="col-12 d-flex justify-content-center">
-                        <button class="btn btn-primary" onclick='moreRowsHandler()' >Xem thêm</button>
+                        <div class="row">
+                            <div class="col-12">
+                                <div
+                                    class="
+                                        my-container
+                                        table-history
+                                        text-center
+                                    "
+                                >
+                                    <h5>Tất cả khu vực phong tỏa</h5>
+
+                                    <table class="table" id="history-table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Ngày</th>
+                                                <th scope="col">Địa chỉ</th>
+                                                <th scope="col">Quận</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody
+                                            class="my-tbody"
+                                            id="history-tbody"
+                                        ></tbody>
+                                    </table>
+                                    <div
+                                        class="spinner-border"
+                                        id="history-loading"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <button
+                                    class="btn btn-primary"
+                                    onclick="moreRowsHandler()"
+                                >
+                                    Xem thêm
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
