@@ -24,6 +24,6 @@ function renderHistoryRows (locations) {
       rows = rows + newRow
       historyTableBody.innerHTML = rows
       counter = counter + 1
+
     }
 }
-

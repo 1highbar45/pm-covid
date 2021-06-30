@@ -1,6 +1,5 @@
-  //----------------Render Side bar inforamtion ---------------
-function renderSideBarNew(locations){
-  
+//----------------Render Side bar inforamtion ---------------
+function renderSideBarNew(locations) {
     const sidebar_new = document.getElementById("side-bar-new");
     const loadingSidebar = document.getElementById("loading-sidebar");
     loadingSidebar.style.visibility = 'hidden'
@@ -11,14 +10,13 @@ function renderSideBarNew(locations){
     // Clear the side bar
     sidebar_new.innerHTML = '' 
     for (const location of locations_newest) {
-      locations_newest_display += `<div class="alert alert-primary">
-      <span class="badge badge-danger">Q.${location.dist }</span>  
-      <span class="badge badge-danger">P.${location.ward }</span>  
-      <br>  
-      ${location.address}  
+        locations_newest_display += `<div class="sidebar-item alert alert-primary">
+        <span class="badge badge-danger">Q.${location.dist}</span>  
+        <span class="badge badge-danger">P.${location.ward}</span>  
+        <br>  
+        ${location.address}  
         </div>`;
     }
-    sidebar_new.innerHTML = locations_newest_display
-
-  }
-  //----------------Render Side bar inforamtion ---------------
+    sidebar_new.innerHTML = locations_newest_display;
+}
+//----------------Render Side bar inforamtion ---------------

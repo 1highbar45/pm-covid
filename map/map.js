@@ -1,4 +1,4 @@
-let map, heatmap
+let map, heatmap;
 function initAutocomplete() {
 
   // create google map
@@ -17,7 +17,7 @@ function initAutocomplete() {
     .then((response) => {
       const data = response;
 
-      data.map((location) => {
+      data.map((location  ) => {
         locations = [
           ...locations,
           {

@@ -8,7 +8,7 @@ body {
     font-size: 14px;
 }
 
-img#logo{
+img#logo {
     width: 200px;
     height: auto;
 }
@@ -16,20 +16,18 @@ img#logo{
 #map {
     height: 500px;
     margin: 0.5rem;
-    
 }
 
 .chart-container {
     margin: 0.5rem;
     border: none;
-    
 }
 
 #piechart {
     width: 100%;
 }
 
-#linechart{
+#linechart {
     width: 100%;
 }
 
@@ -41,8 +39,6 @@ img#logo{
     height: 100%;
 }
 
-
-
 .navbar {
     margin: 0.5rem;
     background-color: transparent;
@@ -50,8 +46,7 @@ img#logo{
 }
 
 .my-container {
-    background-color: none
-
+    background-color: none;
 }
 
 .map-style {
@@ -76,8 +71,6 @@ img#logo{
     padding: 0.75rem 1rem;
 }
 
-
-
 .btn {
     border: 1px solid #999;
     border-radius: 8px;
@@ -87,7 +80,6 @@ img#logo{
     margin: 0 0.5rem;
     /* background-color: #a9a9a9; */
 }
-
 
 #pac-input {
     float: left;
@@ -106,10 +98,9 @@ img#logo{
 select {
     height: 40px;
     width: 100%;
-    border:none;
+    border: none;
     border-radius: 8px;
 }
-
 
 .close-location-container {
     margin-bottom: auto;
@@ -145,6 +136,7 @@ select {
     border: none;
 }
 
+
 .table#close-table, .table#history-table {
     visibility: collapse;
 }
@@ -156,3 +148,31 @@ select {
 }
 
 
+
+.history-item:hover {
+    background-color: #d8dbdebe;
+}
+
+.sidebar-item:hover {
+    background-color: #a1bcda;
+}
+
+.distance-item:hover {
+    background-color: #d8dbdebe;
+}
+
+@media screen and (max-width: 1520px) {
+    .pie-chart,
+    .line-chart {
+        width: 400px;
+    }
+}
+
+.table#close-table {
+    visibility: collapse;
+}
+
+.table td,
+.table th {
+    padding: 1.5rem;
+}
