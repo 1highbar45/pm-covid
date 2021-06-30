@@ -129,9 +129,11 @@
           <div class="my-container">
             <div class="row">
               <div class="col-md-3">
-                <div class="my-container sidebar-new-container ">
+                <div class="my-container sidebar-new-container text-center ">
                   <h5>Khu vực phong tỏa mới hôm nay</h5>
-                  <div class="side-bar" id="side-bar-new">This is side bar new data</div>
+                  <hr>
+                  <div class="side-bar" id="side-bar-new"></div>
+                  <div class="spinner-border" id="loading-sidebar"></div>
                 </div>
               </div>
               <div class="col-md-9">
@@ -152,9 +154,10 @@
 
                   <div class="row">
                     <div class="col-12 ">
-                      <div class="my-container table-history">
+                      <div class="my-container table-history text-center">
                         <h5>Tất cả khu vực phong tỏa</h5>
-                        <table class="table">
+                        
+                        <table class="table" id="history-table">
                           <thead>
                             <tr>
                               <th scope="col">#</th>
@@ -162,10 +165,12 @@
                               <th scope="col">Địa chỉ</th>
                               <th scope="col">Quận</th>
                             </tr>
+                            
                           </thead>
                           <tbody class="my-tbody" id="history-tbody">
                           </tbody>
                         </table>
+                        <div class="spinner-border" id="history-loading"></div>
                       </div>
                     </div>
                     <div class="col-12 d-flex justify-content-center">

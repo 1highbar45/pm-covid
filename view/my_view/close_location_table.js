@@ -14,6 +14,7 @@ function renderCloseLocations(userLatLng){
     const displayLocation = document.getElementById('close-tbody')
     const displayAlert = document.getElementById('near-location-alert')
     const tableDisplay = document.getElementById('close-table')
+ 
 
     // If there are quarantined location nearby (<1000)
     if (closedLocations.length > 0){

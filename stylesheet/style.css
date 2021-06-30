@@ -145,10 +145,14 @@ select {
     border: none;
 }
 
-.table#close-table {
+.table#close-table, .table#history-table {
     visibility: collapse;
 }
+
+
 
 .table td , .table th {
     padding: 1.5rem;
 }
+
+
