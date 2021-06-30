@@ -8,7 +8,7 @@ body {
     font-size: 14px;
 }
 
-img#logo{
+img#logo {
     width: 200px;
     height: auto;
 }
@@ -21,7 +21,6 @@ img#logo{
 .chart-container {
     margin: 0.5rem;
     border: none;
-    
 }
 
 #piechart {
@@ -51,8 +50,7 @@ img#logo{
 }
 
 .my-container {
-    background-color: none
-
+    background-color: none;
 }
 
 .map-style {
@@ -77,8 +75,6 @@ img#logo{
     padding: 0.75rem 1rem;
 }
 
-
-
 .btn {
     border: 1px solid #999;
     border-radius: 8px;
@@ -88,7 +84,6 @@ img#logo{
     margin: 0 0.5rem;
     /* background-color: #a9a9a9; */
 }
-
 
 #pac-input {
     float: left;
@@ -107,7 +102,7 @@ img#logo{
 select {
     height: 40px;
     width: 100%;
-    border:none;
+    border: none;
     border-radius: 8px;
 }
 
@@ -116,7 +111,6 @@ select {
     overflow-y: auto;
     width: 100%;
 }
-
 
 .close-location-bar {
     border: none;
@@ -140,3 +134,22 @@ select {
     border: none;
 }
 
+.history-item:hover {
+    background-color: #d8dbdebe;
+}
+
+.sidebar-item:hover {
+    background-color: #a1bcda;
+}
+
+/* @media screen and (max-width: 1026px) {
+    .map {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1520px) {
+    rect {
+        width: 100%;
+    }
+} */

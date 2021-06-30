@@ -32,21 +32,25 @@ function renderPieChart(locations) {
 
     let data = google.visualization.arrayToDataTable(schemmaArr);
 
-  let options = {
-    title: "Khu phong tỏa theo quận",
-    //titlePosition: "none",
-    legend: { position: "none" },
-    chartArea: {},
-    //width: "100%",
-    height: 400,
-    is3D: true,
-  };
+    let options = {
+        title: "Khu phong tỏa theo quận",
+        //titlePosition: "none",
+        legend: { position: "none" },
+        chartArea: {},
+        //width: "100%",
+        height: 400,
+        is3D: true,
+    };
 
     let chart = new google.visualization.PieChart(
         document.getElementById("piechart")
     );
 
     chart.draw(data, options);
+
+    $(window).resize(function () {
+        renderPieChart(locations);
+    });
 }
 
 function renderLineChart(locations) {
@@ -75,36 +79,41 @@ function renderLineChart(locations) {
         }
     }
 
-  let data = new google.visualization.DataTable();
-  data.addColumn("date", "Ngày");
-  data.addColumn("number", "Số khu phong tỏa");
-  
-  const dateFormat = dateList[0].date.split('/')
-  const newDate = new Date(`${dateFormat[2]}-${dateFormat[1]}-${dateFormat[0]}`)
-  console.log(newDate)
-  console.log(dateList[0].num)
-  let rows = []
-  for (const element of dateList) {
-    // Take day, month ,year from date format date/month/year
-    const dateFormat = element.date.split('/')
-    rows.push([new Date(`${dateFormat[2]}-${dateFormat[1]}-${dateFormat[0]}`),element.num]) 
-  }
-  console.log(rows)
-  data.addRows(rows)
+    let data = new google.visualization.DataTable();
+    data.addColumn("date", "Ngày");
+    data.addColumn("number", "Số khu phong tỏa");
 
-  let options = {
-    title: "Khu phong tỏa",
-    //width: '500',
-    height: 400,
-    hAxis: {
-      format: "d/M",
-      gridlines: { count: 15 },
-    },
-    vAxis: {
-      gridlines: { color: "none" },
-      minValue: 0,
-    },
-  };
+    const dateFormat = dateList[0].date.split("/");
+    const newDate = new Date(
+        `${dateFormat[2]}-${dateFormat[1]}-${dateFormat[0]}`
+    );
+    console.log(newDate);
+    console.log(dateList[0].num);
+    let rows = [];
+    for (const element of dateList) {
+        // Take day, month ,year from date format date/month/year
+        const dateFormat = element.date.split("/");
+        rows.push([
+            new Date(`${dateFormat[2]}-${dateFormat[1]}-${dateFormat[0]}`),
+            element.num,
+        ]);
+    }
+    console.log(rows);
+    data.addRows(rows);
+
+    let options = {
+        title: "Khu phong tỏa",
+        //width: '500',
+        height: 400,
+        hAxis: {
+            format: "d/M",
+            gridlines: { count: 15 },
+        },
+        vAxis: {
+            gridlines: { color: "none" },
+            minValue: 0,
+        },
+    };
 
     // let data = google.visualization.arrayToDataTable([
     //   ['Year', 'Sales'],
@@ -119,4 +128,8 @@ function renderLineChart(locations) {
     );
 
     chart.draw(data, options);
+
+    $(window).resize(function () {
+        renderLineChart(locations);
+    });
 }
