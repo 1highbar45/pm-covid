@@ -62,12 +62,12 @@
                                             type="text"
                                             placeholder="Search Box"
                                         />
-                                        <button
+                                        <!-- <button
                                             class="btn btn-primary toggle"
                                             id="btn_toggle_heatmap"
                                         >
                                             Toggle Heatmap
-                                        </button>
+                                        </button> -->
                                         <form action="#">
                                             <select
                                                 onchange="selectedLocation()"
@@ -226,10 +226,11 @@
                           </tbody>
                         </table>
                         <div class="spinner-border" id="history-loading"></div>
+                        <button class="btn btn-primary" onclick='moreRowsHandler()' >Xem thêm</button>
                       </div>
                     </div>
                     <div class="col-12 d-flex justify-content-center">
-                        <button class="btn btn-primary" onclick='moreRowsHandler()' >Xem thêm</button>
+                
                     </div>
                 </div>
             </div>
