@@ -39,6 +39,10 @@ function renderPieChart(locations) {
         //width: "100%",
         height: 400,
         is3D: true,
+        animation:{
+            duration: 1000,
+            easing: 'out',
+          }
     };
 
     let chart = new google.visualization.PieChart(
@@ -108,6 +112,10 @@ function renderLineChart(locations) {
             gridlines: { color: "none" },
             minValue: 0,
         },
+        animation:{
+            duration: 1000,
+            easing: 'out',
+          }
     };
 
     let chart = new google.visualization.LineChart(
