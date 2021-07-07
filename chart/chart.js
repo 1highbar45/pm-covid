@@ -38,7 +38,8 @@ function renderPieChart(locations) {
         chartArea: {},
         //width: "100%",
         height: 400,
-        is3D: true,
+        is3D: true
+        ,
         animation:{
             duration: 1000,
             easing: 'out',
@@ -111,7 +112,8 @@ function renderLineChart(locations) {
         vAxis: {
             gridlines: { color: "none" },
             minValue: 0,
-        },
+        }
+        ,
         animation:{
             duration: 1000,
             easing: 'out',
@@ -125,7 +127,7 @@ function renderLineChart(locations) {
     chart.draw(data, options);
 }
 
-$(window).smartresize(function () {
-    renderLineChart();
-    renderPieChart();
-});
+// $(window).smartresize(function () {
+//     renderLineChart();
+//     renderPieChart();
+// });
