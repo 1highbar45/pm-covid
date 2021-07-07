@@ -20,11 +20,11 @@ function renderHeatMapLayer(locations) {
     heatmap.set("radius", 15);
 
     // Set toggle button
-    let btn_toggle_heatmap = document.getElementById("btn_toggle_heatmap");
-    btn_toggle_heatmap.addEventListener("click", toggleHeatmap);
+    //let btn_toggle_heatmap = document.getElementById("btn_toggle_heatmap");
+    //btn_toggle_heatmap.addEventListener("click", toggleHeatmap);
 }
 //-------------------Render heat map layer-------------------------
 
-function toggleHeatmap() {
-    heatmap.setMap(heatmap.getMap() ? null : map);
-}
+// function toggleHeatmap() {
+//     heatmap.setMap(heatmap.getMap() ? null : map);
+// }
